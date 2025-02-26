@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ritas Mango 728x90</title>
+    <link rel="stylesheet" type="text/css" href="https://jorgeconj.com/banners/ritas/mango/styles/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="scripts/EBLoader.js"></script>
+    <script src="scripts/script.js"></script>
+</head>
+
+<body>
+    <div id="ad">
+        <div id="banner">
+        	<div class="stage">
+        		<div class="fondo">&nbsp;</div>
+        		<div class="boom1">
+        			<div class="agua"></div>
+        		</div>
+        		<div class="boom2">
+        			<div class="agua"></div>
+        		</div>
+        		<div class="lata"></div>
+        		<div class="logo"><img src="images/logo.png"></div>
+        		<div class="cinta"></div>
+        		<div class="legal">Todo con medida</div>
+        	</div>
+            <div class="buttons">
+                <button id="clickthrough-button" class="button clickthrough">ClickThrough</button>
+            </div>
+        </div>
+    </div>
+<script>
+	jQuery(document).ready(function($) {
+		var bannerSize1 = 728
+		var bannerSize2 = 90
+		$('#ad, #banner').css({
+			width: bannerSize1 - 2,
+			height: bannerSize2 - 2
+		});
+		$('.button').css({
+			width: bannerSize1,
+			height: bannerSize2
+		});
+	});
+</script>
+</body>
+</html>

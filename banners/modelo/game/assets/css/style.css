@@ -1,0 +1,38 @@
+@import url(https://fonts.googleapis.com/css?family=Press+Start+2P);
+body {font-family: 'Press Start 2P', cursive;}
+#clickArea{background-color: #0068FF; border: none; color: #FFF; cursor: pointer; font-family: Arial, sans-serif; font-size: 12px; outline: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); user-select: none;}
+#clickArea:hover,#clickArea:active{color: #FAF000;}
+#clickArea:active{font-size: 11px;}
+body{margin: 0px;}
+#ad{display: block; border: rgb(145, 153, 153) 1px solid; overflow: hidden; width: 298px; height: 248px; -moz-user-select: -moz-none; -khtml-user-select: none; -webkit-user-select: none; -ms-user-select: none; user-select: none;}
+#banner{position: absolute; display: block; width: 298px; height: 248px; background-color: #FFF; overflow: hidden;}
+.buttons{position: absolute; top: 0; left: 0;z-index: 10;}
+#clickArea{display: block; width: 300px; height: 250px; opacity: 0;}
+
+.stage{width: 300px;height: 250px; display: block;margin: 0; padding: 0;background-image: url('../img/bg.jpg'); background-position: bottom left; background-repeat: no-repeat;}
+.sky{width: 300px;height: 153px;display: block; background: url(../img/sky.jpg) repeat-x left top;animation:theWind 10s infinite linear;}
+.botella{width: 62px;height: 177px;display: block;margin:0 auto; background: url(../img/sprite.png)no-repeat left  -74px;position: absolute;bottom: 300px;left: 120px; animation: fallIn 2s 1 1s;animation-fill-mode: forwards;}
+.oneup{-moz-transform: scale(0);-webkit-transform: scale(0);-o-transform: scale(0);-ms-transform: scale(0);transform: scale(0); width: 40px;height: 20px;display: block;position: absolute;top: 30px;left: 130px;background: url(../img/sprite.png) 0 -47px;animation: PopIn 2s 1 2s;animation-fill-mode: forwards;}
+.logo{display: block;width: 140px;height: 45px;background: url(../img/sprite.png)no-repeat top left; text-indent: -9999px; margin:0 auto;}
+#what{width: 20px;height: 20px;display: inline-block;vertical-align: middle;background: url(../img/sprite.png)right -48px;text-indent: -9999px;}
+p{padding: 0;margin: 0; color: #fff;text-transform: uppercase;text-align: center; font-size: 15px; line-height: 18px;text-shadow: 3px 3px 5px #000000; font-weight: 900;}
+p span.thin{font-weight: 300;}
+div[class^='message'],div[class*=' message']{
+	width: 210px;
+	padding: 15px 0 10px 0;
+	position: absolute;
+	top: 90px;
+	left: 40px;
+	background: #000;
+	border: solid 2px #fff;
+	-webkit-box-shadow: 0 0 0 5px #000;
+	box-shadow: 0 0 0 5px #000;}
+.legal{font-family: Arial, sans-serif;position: absolute; bottom:0px; right: 5px; font-size: 8px; font-style: normal; text-shadow:none;}
+.message1{-moz-transform: scale(0);-webkit-transform: scale(0);-o-transform: scale(0);-ms-transform: scale(0);transform: scale(0);animation: PopInOut 2s 1 5s;animation-fill-mode: forwards;}
+.message2{-moz-transform: scale(0);-webkit-transform: scale(0);-o-transform: scale(0);-ms-transform: scale(0);transform: scale(0);animation: PopInOut 3s 1 7s;animation-fill-mode: forwards;}
+.message3{-moz-transform: scale(0);-webkit-transform: scale(0);-o-transform: scale(0);-ms-transform: scale(0);transform: scale(0);animation: PopIn 3s 1 10s;animation-fill-mode: forwards;}
+@keyframes fallIn{0%{bottom: 300px;}5%{bottom: 12px;}10%{bottom: 18px;}100%{bottom: 12px;}}
+@keyframes theWind{0%{background-position: 0 top;}100%{background-position: -300px top;}}
+@keyframes PopOut{0%{-moz-transform: scale(1);-webkit-transform: scale(1);-o-transform: scale(1);-ms-transform: scale(1);transform: scale(1);}97%{-moz-transform: scale(1);-webkit-transform: scale(1);-o-transform: scale(1);-ms-transform: scale(1);transform: scale(1);}100%{-moz-transform: scale(0);-webkit-transform: scale(0);-o-transform: scale(0);-ms-transform: scale(0);transform: scale(0);}}
+@keyframes PopInOut{0%{-moz-transform: scale(0);-webkit-transform: scale(0);-o-transform: scale(0);-ms-transform: scale(0);transform: scale(0);}5%{-moz-transform: scale(1);-webkit-transform: scale(1);-o-transform: scale(1);-ms-transform: scale(1);transform: scale(1);}10%{-moz-transform: scale(0.7);-webkit-transform: scale(0.7);-o-transform: scale(0.7);-ms-transform: scale(0.7);transform: scale(0.7);}15%{-moz-transform: scale(1);-webkit-transform: scale(1);-o-transform: scale(1);-ms-transform: scale(1);transform: scale(1);}85%{-moz-transform: scale(1);-webkit-transform: scale(1);-o-transform: scale(1);-ms-transform: scale(1);transform: scale(1);}100%{-moz-transform: scale(0);-webkit-transform: scale(0);-o-transform: scale(0);-ms-transform: scale(0);transform: scale(0);}}
+@keyframes PopIn{0%{-moz-transform: scale(0);-webkit-transform: scale(0);-o-transform: scale(0);-ms-transform: scale(0);transform: scale(0);}20%{-moz-transform: scale(1);-webkit-transform: scale(1);-o-transform: scale(1);-ms-transform: scale(1);transform: scale(1);}100%{-moz-transform: scale(1);-webkit-transform: scale(1);-o-transform: scale(1);-ms-transform: scale(1);transform: scale(1);}}

@@ -1,0 +1,141 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:900);
+body {font-family: Arial, sans-serif;}
+button {background-color: #0068FF;border: none;color: #FFF;cursor: pointer;font-family: Arial, sans-serif;font-size: 12px;outline: none;-webkit-tap-highlight-color: rgba(0, 0, 0, 0);user-select: none;}
+button:hover,
+button:active {color: #FAF000;}
+button:active {font-size: 11px;}
+.label {color: #0D2A4D;position: absolute;margin-left: 10px;top: 35px;}
+body {margin: 0px;}
+#ad {display: block;border: rgb(145, 153, 153) 1px solid;overflow: hidden;width: 726px;height: 90px;-moz-user-select: -moz-none;-khtml-user-select: none;-webkit-user-select: none;-ms-user-select: none;user-select: none;}
+#banner {position: absolute;display: block;width: 726px;height: 90px;background-color: #FFF;overflow: hidden;}
+.buttons {position: absolute;bottom: 0px;right: 0px; opacity: 0;width: 728px; height: 90px;}
+.button {width: 728px;height: 90px; position:absolute; left:0; top:0;}
+.label {font-size: 14px;top: 65px;}
+.collapsed .buttons {bottom: 30px;left: 10px;}
+
+.scene1{
+    background: url(../images/bg.jpg)center center;
+    position: relative;
+    top: 0;
+    width: 728px;
+    height: 90px;
+}
+.scene2{
+    background:#f58025;
+    position: absolute;
+    width: 728px;
+    height: 90px;
+    top: -90px;
+    animation: riseUp 2000ms 1 7500ms linear;
+    animation-fill-mode: forwards;
+}
+.logo{
+	width: 120px;
+	height: 90px;
+	text-indent: -9999px;
+	margin: 0 auto;
+	background: url(../images/logo.svg)no-repeat center center;
+	-webkit-background-size: 100%;
+	background-size: 100%;
+}
+.ribon1{
+	width: 154px;
+	height: 142px;
+	display: block;
+	background: url(../images/copy1.png)no-repeat center center;
+	-webkit-background-size: 100%;
+	background-size: 100%;
+	text-indent: -9999px;
+	position: absolute;
+	bottom: 0;left: 0;
+
+	transform: scale(0);
+	-o-transform: scale(0);
+	-ms-transform: scale(0);
+	-moz-transform: scale(0);
+	-webkit-transform: scale(0);
+	animation: popIn 5000ms 1;
+	animation-fill-mode: forwards;
+	-webkit-animation: popIn 5000ms 1;
+	-webkit-animation-fill-mode: forwards;
+}
+.ribon2{
+	width: 244px;
+	height: 142px;
+	display: block;
+	background: url(../images/copy2.png)no-repeat center center;
+	-webkit-background-size: 100%;
+	background-size: 100%;
+	text-indent: -9999px;
+	position: absolute;
+	top: -25px;left: 265px;
+
+	transform: scale(0);
+	-o-transform: scale(0);
+	-ms-transform: scale(0);
+	-moz-transform: scale(0);
+	-webkit-transform: scale(0);
+	animation: popIn 3000ms 1 3000ms;
+	animation-fill-mode: forwards;
+	-webkit-animation: popIn 3000ms 1 3000ms;
+	-webkit-animation-fill-mode: forwards;
+}
+.ribon3{
+	width: 244px;
+	height: 142px;
+	display: block;
+	background: url(../images/copy3.png)no-repeat center center;
+	-webkit-background-size: 100%;
+	background-size: 100%;
+	text-indent: -9999px;
+	position: absolute;
+	bottom: -123px;left: 520px;
+
+	animation: fallIn 2000ms 1 5000ms;
+	animation-fill-mode: forwards;
+	-webkit-animation: fallIn 2000ms 1 5000ms;
+	-webkit-animation-fill-mode: forwards;
+}
+
+/*Animations 10secs */
+
+@keyframes popIn{
+	0%{transform: scale(0);	-o-transform: scale(0);	-ms-transform: scale(0);	-moz-transform: scale(0);	-webkit-transform: scale(0);}
+	30%{transform: scale(1.1); -o-transform: scale(1.1); -ms-transform: scale(1.1);	-moz-transform: scale(1.1);	-webkit-transform: scale(1.1);}
+	33%{transform: scale(0.8); -o-transform: scale(0.8); -ms-transform: scale(0.8);	-moz-transform: scale(0.8);	-webkit-transform: scale(0.8);}
+	36%{transform: scale(1); -o-transform: scale(1); -ms-transform: scale(1); -moz-transform: scale(1);	-webkit-transform: scale(1);}
+	100%{transform: scale(1); -o-transform: scale(1); -ms-transform: scale(1); -moz-transform: scale(1); -webkit-transform: scale(1);}
+}
+@keyframes fallIn{
+	0%{bottom: 123px;}
+	30%{bottom: -20px;}
+	100%{bottom: -20px;}
+}
+@keyframes riseUp{
+	0%{top: -250px;}
+	30%{top: 0px;}
+	35%{top: -5px;}
+	40%{top: 0px;}
+	100%{top: 0px;}
+}
+
+
+@-webkit-keyframes popIn{
+	0%{transform: scale(0);	-o-transform: scale(0);	-ms-transform: scale(0);	-moz-transform: scale(0);	-webkit-transform: scale(0);}
+	30%{transform: scale(1.1); -o-transform: scale(1.1); -ms-transform: scale(1.1);	-moz-transform: scale(1.1);	-webkit-transform: scale(1.1);}
+	33%{transform: scale(0.8); -o-transform: scale(0.8); -ms-transform: scale(0.8);	-moz-transform: scale(0.8);	-webkit-transform: scale(0.8);}
+	36%{transform: scale(1); -o-transform: scale(1); -ms-transform: scale(1); -moz-transform: scale(1);	-webkit-transform: scale(1);}
+	100%{transform: scale(1); -o-transform: scale(1); -ms-transform: scale(1); -moz-transform: scale(1); -webkit-transform: scale(1);}
+}
+@-webkit-keyframes fallIn{
+	0%{bottom: 123px;}
+	30%{bottom: -20px;}
+	100%{bottom: -20px;}
+}
+@-webkit-keyframes riseUp{
+	0%{top: -250px;}
+	30%{top: 0px;}
+	35%{top: -5px;}
+	40%{top: 0px;}
+	100%{top: 0px;}
+}

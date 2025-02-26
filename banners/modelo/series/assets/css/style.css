@@ -1,0 +1,26 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:300,900);
+body {font-family: 'Lato', sans-serif;}
+#clickArea{background-color: #0068FF; border: none; color: #FFF; cursor: pointer; font-family: Arial, sans-serif; font-size: 12px; outline: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); user-select: none;}
+#clickArea:hover,#clickArea:active{color: #FAF000;}
+#clickArea:active{font-size: 11px;}
+body{margin: 0px;}
+#ad{display: block; border: rgb(145, 153, 153) 1px solid; overflow: hidden; width: 298px; height: 248px; -moz-user-select: -moz-none; -khtml-user-select: none; -webkit-user-select: none; -ms-user-select: none; user-select: none;}
+#banner{position: absolute; display: block; width: 298px; height: 248px; background-color: #FFF; overflow: hidden;}
+.buttons{position: absolute; top: 0; left: 0;z-index: 10;}
+#clickArea{display: block; width: 300px; height: 250px; opacity: 0;}
+
+.stage{width: 300px;height: 250px; display: block;margin: 0; padding: 0;background-image: url('../img/sprite.jpg'); background-position: bottom left; background-repeat: no-repeat;}
+.logo{display: block;width: 146px;height: 49px;background: url(../img/sprite.jpg)no-repeat top left; text-indent: -9999px; margin: 11px 0 0 80px;}
+p{padding: 0;margin: 0; color: #fff;text-transform: uppercase;text-align: center; font-size: 21px; line-height: 24px;text-shadow: 3px 3px 5px #000000; font-weight: 900;}
+p span.thin{font-weight: 300;}
+div[class^='message'],div[class*=' message']{width: 100%;height: 142px;padding: 36px 0;position: absolute;top: 20px;left: 0;}
+.legal{font-family: Arial, sans-serif;position: absolute; bottom:0px; left: 5px; font-size: 8px; font-style: normal; text-shadow:none;}
+.loading{width: 42px;height: 42px;display: block; margin: 50px auto 0;animation: spin 2s linear infinite;}
+.message1{animation: PopOut 4s 1;animation-fill-mode: forwards;}
+.message2{-moz-transform: scale(0);-webkit-transform: scale(0);-o-transform: scale(0);-ms-transform: scale(0);transform: scale(0);animation: PopInOut 3s 1 4s;animation-fill-mode: forwards;}
+.message3{-moz-transform: scale(0);-webkit-transform: scale(0);-o-transform: scale(0);-ms-transform: scale(0);transform: scale(0);animation: PopInOut 3s 1 8s;animation-fill-mode: forwards;}
+.message4{-moz-transform: scale(0);-webkit-transform: scale(0);-o-transform: scale(0);-ms-transform: scale(0);transform: scale(0);animation: PopIn 3s 1 12s;animation-fill-mode: forwards;}
+@keyframes spin{0%{-moz-transform: rotate(0deg);-webkit-transform: rotate(0deg);-o-transform: rotate(0deg);-ms-transform: rotate(0deg);transform: rotate(0deg);}100%{-moz-transform: rotate(359deg);-webkit-transform: rotate(359deg);-o-transform: rotate(359deg);-ms-transform: rotate(359deg);transform: rotate(359deg);}}
+@keyframes PopOut{0%{-moz-transform: scale(1);-webkit-transform: scale(1);-o-transform: scale(1);-ms-transform: scale(1);transform: scale(1);}97%{-moz-transform: scale(1);-webkit-transform: scale(1);-o-transform: scale(1);-ms-transform: scale(1);transform: scale(1);}100%{-moz-transform: scale(0);-webkit-transform: scale(0);-o-transform: scale(0);-ms-transform: scale(0);transform: scale(0);}}
+@keyframes PopInOut{0%{-moz-transform: scale(0);-webkit-transform: scale(0);-o-transform: scale(0);-ms-transform: scale(0);transform: scale(0);}5%{-moz-transform: scale(1);-webkit-transform: scale(1);-o-transform: scale(1);-ms-transform: scale(1);transform: scale(1);}10%{-moz-transform: scale(0.7);-webkit-transform: scale(0.7);-o-transform: scale(0.7);-ms-transform: scale(0.7);transform: scale(0.7);}15%{-moz-transform: scale(1);-webkit-transform: scale(1);-o-transform: scale(1);-ms-transform: scale(1);transform: scale(1);}85%{-moz-transform: scale(1);-webkit-transform: scale(1);-o-transform: scale(1);-ms-transform: scale(1);transform: scale(1);}100%{-moz-transform: scale(0);-webkit-transform: scale(0);-o-transform: scale(0);-ms-transform: scale(0);transform: scale(0);}}
+@keyframes PopIn{0%{-moz-transform: scale(0);-webkit-transform: scale(0);-o-transform: scale(0);-ms-transform: scale(0);transform: scale(0);}20%{-moz-transform: scale(1);-webkit-transform: scale(1);-o-transform: scale(1);-ms-transform: scale(1);transform: scale(1);}100%{-moz-transform: scale(1);-webkit-transform: scale(1);-o-transform: scale(1);-ms-transform: scale(1);transform: scale(1);}}
