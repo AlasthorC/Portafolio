@@ -1,0 +1,209 @@
+/*|||||||||||||||||||||||||||||||||||||||||||||
+|||||||||||||||||||||||||||||||||||||||||||||||
+<•[[     ESTILOS GENERALES E @IMPORTS     ]]•>
+|||||||||||||||||||||||||||||||||||||||||||||||
+|||||||||||||||||||||[⬇︎]||||||||||||||||||||||*/
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,700);
+
+body{background: #1f1f1f url(../img/bgMaze.png);font-family: 'Roboto', sans-serif;font-weight: 100;color: #cccccc;position: relative;}
+.bluish{color: #00a0a4;}
+.reddish{color: #AB0808;}
+.red-label{background: #AB0808;}
+h1, h2, h3, h4, h5, h6{text-transform: uppercase;font-weight: 100!important;}
+.h3{font-size: 30px;margin-bottom: 20px;}
+.h4{font-size: 20px;margin-bottom: 20px;}
+i{font-style: italic;}
+.fullwidth{width: 100%;display: block;position: relative;}
+section{position: relative;min-height: 100vh;}
+a.anchor{display: inline-block;color: #AB0808;border-bottom: 1px dotted #fff;}
+/*|||||||||||||||||||||[⬆︎]||||||||||||||||||||
+|||||||||||||||||||||||||||||||||||||||||||||||
+<•[[     ESTILOS GENERALES E @IMPORTS     ]]•>
+|||||||||||||||||||||||||||||||||||||||||||||||
+||||||||||||||||||||||||||||||||||||||||||||||*/
+
+/*|||||||||||||||||||||||||||||||||||||||||||||
+|||||||||||||||||||||||||||||||||||||||||||||||
+       <•[[     ESTILOS MENU 3D     ]]•>
+|||||||||||||||||||||||||||||||||||||||||||||||
+|||||||||||||||||||||[⬇︎]||||||||||||||||||||||*/
+.leNav{position: fixed;top: 0;left: 0;z-index: 10;}
+.meny{display: none;background: rgba(0, 0, 0, 0.7);width: 200px;height: 100px;position: absolute;top: 80px;left: 0;}
+.meny li{padding: 5px 0;border-bottom: 1px solid #ffffff;font-size: 20px;text-transform: uppercase;}
+.meny li i{margin: 0 20px;}
+.meny-burguer{display: block;width: 50px;height: 50px;margin: 20px;position: absolute;top: 0;left: 0;z-index: 1;overflow: hidden;cursor: pointer;opacity: 0.8;}
+.meny-burguer:hover{opacity: 1;}
+.meny-burguer span{display: block;width: 40px;height: 2px;background: #00a0a4;border-radius: 10px;margin: 13px 0;-webkit-transition: all 500ms ease-in-out;-moz-transition: all 500ms ease-in-out;-ms-transition: all 500ms ease-in-out;-o-transition: all 500ms ease-in-out;transition: all 500ms ease-in-out;}
+.meny-burguer span.mcCow{margin-left: 0px;width: 21px;}
+.meny-burguer span.mcPickle{margin-left: 20px;margin-top: -15px;width: 20px;}
+.meny-burguer.cross span.mcCow{background: #ac0909;margin-left: -100px;}
+.meny-burguer.cross span.mcPickle{background: #ac0909;margin-left: 100px;}
+.meny-burguer.cross span.mcBreadT{background: #ac0909;margin-top: 30px;transform-origin: 50%;-moz-transform: rotate(315deg);-webkit-transform: rotate(315deg);-o-transform: rotate(315deg);-ms-transform: rotate(315deg);transform: rotate(315deg);}
+.meny-burguer.cross span.mcBread{background: #ac0909;margin-top: -30px;transform-origin: 50%;-moz-transform: rotate(-315deg);-webkit-transform: rotate(-315deg);-o-transform: rotate(-315deg);-ms-transform: rotate(-315deg);transform: rotate(-315deg);}
+nav ul{padding-left: 0;margin-left: 0;}
+nav ul li{list-style: none;}
+nav ul li:hover{background: rgba(255, 255, 255, 0.9);}
+nav ul li:hover a{color: #000000;}
+nav a{color: #ffffff;text-decoration: none;}
+nav a.active{color:#00a0a4;}
+/*|||||||||||||||||||||[⬆︎]||||||||||||||||||||
+|||||||||||||||||||||||||||||||||||||||||||||||
+       <•[[     ESTILOS MENU 3D     ]]•>
+|||||||||||||||||||||||||||||||||||||||||||||||
+||||||||||||||||||||||||||||||||||||||||||||||*/
+
+/*|||||||||||||||||||||||||||||||||||||||||||||
+|||||||||||||||||||||||||||||||||||||||||||||||
+<•[[ INTRO DE LA PAGINA - SE DIBUJA EL LOGO ]]•>
+|||||||||||||||||||||||||||||||||||||||||||||||
+|||||||||||||||||||||[⬇︎]||||||||||||||||||||||*/
+#large-header, #large-header canvas{width: 100%;height: 900px;position: absolute;top: 0;left: 0;z-index: -100;opacity: 0.5;}
+svg#logo{width: 70vh;height: 70vh;display: block;margin: 0 auto;}
+svg#logo #OUTLINES  path{fill-opacity: 0;stroke: #ff9900;stroke-width: 2;}
+svg#logo #OUTLINES path#bD-outline{stroke-dasharray: 691px;stroke-dashoffset: 691px;stroke: #00a0a4;animation: drawLogo 1 3s  forwards;}
+svg#logo #OUTLINES path#bW-outline{stroke-dasharray: 751px;stroke-dashoffset: 751px;stroke: #00a0a4;animation: drawLogo 1 3s 500ms forwards;}
+svg#logo #OUTLINES path#dJ-outline{stroke-dasharray: 770px;stroke-dashoffset: 770px;stroke: #ac0909;animation: drawLogo 1 3s 1000ms forwards;}
+svg#logo #OUTLINES path#dD-outline{stroke-dasharray: 1012px;stroke-dashoffset: 1012px;stroke: #ac0909;animation: drawLogo 1 3s 1500ms forwards;}
+svg#logo #OUTLINES path#dP-outline{stroke-dasharray: 755px;stroke-dashoffset: 755px;stroke: #ac0909;animation: drawLogo 1 3s 2000ms forwards;}
+svg#logo #OUTLINES path#dM-outline{stroke-dasharray: 752px;stroke-dashoffset: 752px;stroke: #ac0909;animation: drawLogo 1 3s 2500ms forwards;}
+svg#logo #OUTLINES{opacity: 1;animation: FadeOut 1 500ms  5500ms forwards;}
+svg#logo #REYENOS{opacity: 0;transform: scale(0.95);transform-origin: 50% 50%;animation: FadeIn 1 500ms  5000ms forwards;}
+/*ANIMACIONES DE ELEMENTOS*/
+@keyframes drawLogo{to{stroke-dashoffset: 0;}}
+@keyframes FadeOut{to{opacity: 0;}}
+@keyframes FadeIn{0%{opacity: 0; transform: scale(0.95);}80%{opacity: 0.8; transform: scale(1.05);}100%{opacity: 1; transform: scale(1);}}
+/*FLECHITA DE NAVEGACION*/
+a.arrow{width: 60px;height: 60px;display: block;margin: 40px auto;background: rgba(0,0,0,0.2);border-radius: 50%;position: relative;}
+a.arrowD{width: 60px;height: 60px;display: block;background: rgba(0,0,0,0.2);border-radius: 50%;position: fixed;right: 30px;bottom: 30px;opacity: 0;-webkit-transition: all 300ms ease-in-out;-moz-transition: all 300ms ease-in-out;-ms-transition: all 300ms ease-in-out;-o-transition: all 300ms ease-in-out;transition: all 300ms ease-in-out;}
+a.arrowD svg{-webkit-transform: rotate(180deg);-ms-transform: rotate(180deg);-o-transform: rotate(180deg);transform: rotate(180deg);}
+a.arrow:after{content: 'Click me';color: #ffffff;text-transform: uppercase;opacity: 0.4;position: absolute;top: 12px;left: 3px;text-align: center;-webkit-transition: all 300ms ease-in-out;-moz-transition: all 300ms ease-in-out;-ms-transition: all 300ms ease-in-out;-o-transition: all 300ms ease-in-out;transition: all 300ms ease-in-out;}
+a.arrowD:after{content: 'Back to Top';color: #ffffff;text-transform: uppercase;opacity: 0.4;position: absolute;top: 12px;left: 3px;text-align: center;-webkit-transition: all 300ms ease-in-out;-moz-transition: all 300ms ease-in-out;-ms-transition: all 300ms ease-in-out;-o-transition: all 300ms ease-in-out;transition: all 300ms ease-in-out;}
+a.arrow:hover
+a.arrowD:hover{background: transparent;}
+a.arrow:hover:after,
+a.arrowD:hover:after{transform: scale(0)!important;}
+svg#downWards{width: 50px;height: 50px;display: block;margin: 0 auto;}
+svg#downWards > path,
+svg#downWards > rect,
+svg#downWards > line,
+svg#downWards > polyline{fill-opacity: 0;stroke: #FFFFFF;stroke-width: 6;stroke-dasharray: 265px;stroke-dashoffset: 265px;-webkit-transition: all 500ms ease-in-out;-moz-transition: all 500ms ease-in-out;-ms-transition: all 500ms ease-in-out;-o-transition: all 500ms ease-in-out;transition: all 500ms ease-in-out;}
+.arrow:hover svg#downWards > path,
+.arrow:hover svg#downWards > rect,
+.arrow:hover svg#downWards > line,
+.arrow:hover svg#downWards > polyline,
+.arrowD:hover svg#downWards > path,
+.arrowD:hover svg#downWards > rect,
+.arrowD:hover svg#downWards > line,
+.arrowD:hover svg#downWards > polyline{fill-opacity: 0;stroke: #FFFFFF;stroke-width: 2;stroke-dasharray: 265px;stroke-dashoffset: 0;-webkit-transition: all 500ms ease-in-out;-moz-transition: all 500ms ease-in-out;-ms-transition: all 500ms ease-in-out;-o-transition: all 500ms ease-in-out;transition: all 500ms ease-in-out;}
+.watsme{position: fixed; bottom: 20px;left: 20px; transform: scale(0.8); transition: all 300ms ease-in-out;} 
+.watsme:hover{transform: scale(1); transition: all 300ms ease-in-out;}
+/*|||||||||||||||||||||[⬆︎]||||||||||||||||||||
+|||||||||||||||||||||||||||||||||||||||||||||||
+<•[[ INTRO DE LA PAGINA - SE DIBUJA EL LOGO ]]•>
+|||||||||||||||||||||||||||||||||||||||||||||||
+||||||||||||||||||||||||||||||||||||||||||||||*/
+
+
+/*|||||||||||||||||||||||||||||||||||||||||||||
+|||||||||||||||||||||||||||||||||||||||||||||||
+       <•[[     SECCION SOBRE MI     ]]•>
+|||||||||||||||||||||||||||||||||||||||||||||||
+|||||||||||||||||||||[⬇︎]||||||||||||||||||||||*/
+.hexagonpics{padding-top: 20vh;}
+.aboutMe{padding-top: 10vh;font-size: 18px;}
+.SobreMi h3{text-align: right;}
+.laskill{margin-bottom: 20px;}
+.laskill .icon img{height: 30px; width: 30px; margin: 0 10px;}
+.skillbar{width: 100%;position: relative;height: 20px;background: #000; border-radius: 3px; border:solid 1px rgba(255,255,255,0.4); overflow:hidden;}
+.fillbar{width: 50%; height: 18px; background:#ededed url('../img/loading.png') repeat; -webkit-background-size: 20px;background-size: 20px; position: absolute;top: 0; animation:loader 10s infinite linear; border-radius: 2px;-webkit-box-shadow:inset 0 0 10px 1px rgba(0,0,0,0.2);box-shadow:inset 0 0 10px 1px rgba(0,0,0,1);}
+.skillbar.p95 .fillbar{width: 95%;}
+.skillbar.p90 .fillbar{width: 90%;}
+.skillbar.p80 .fillbar{width: 80%;}
+.skillbar.p75 .fillbar{width: 75%;}
+.skillbar.p70 .fillbar{width: 70%;}
+.skillbar.p60 .fillbar{width: 60%;}
+@keyframes loader{
+	0%{background-position: 0 0;}
+	0%{background-position: -100% 0;}
+}
+.explainer{padding: 10px;}
+/*|||||||||||||||||||||[⬆︎]||||||||||||||||||||
+|||||||||||||||||||||||||||||||||||||||||||||||
+       <•[[     SECCION SOBRE MI     ]]•>
+|||||||||||||||||||||||||||||||||||||||||||||||
+||||||||||||||||||||||||||||||||||||||||||||||*/
+
+/*|||||||||||||||||||||||||||||||||||||||||||||
+|||||||||||||||||||||||||||||||||||||||||||||||
+<•[[    SECCION DE CONTACTO      ]]•>
+|||||||||||||||||||||||||||||||||||||||||||||||
+|||||||||||||||||||||[⬇︎]||||||||||||||||||||||*/
+.las-formas{margin-top: 5vh;}
+.le-rrss{position: relative; height: 300px;}
+.le-tuit,.le-fb,.le-ig,.le-li{position: absolute;top: 0; left: 0; border: solid 3px #fff; border-radius: 50%;}
+.le-tuit{font-size: 3em;left: 50%;width: 70px;height: 70px;line-height: 62px;border-color: #1da1f2;text-align: center; border-width: 6px;}
+.le-fb{font-size: 6em;left: 50%;top: 40%;width: 130px;height: 130px;line-height: 109px;border-color: #3b5998;text-align: center;border-width: 15px;}
+.le-ig{font-size: 4em;top: 50%;width: 100px;height: 100px;line-height: 80px;border-color: #e1306c;text-align: center;border-width: 14px;}
+.le-li{    font-size: 3em;
+    width: 100px;
+    height: 100px;
+    line-height: 66px;
+    border-color: #dd5143;
+    text-align: center;
+    border-width: 15px;}
+.lasforms{padding-top: 10vh;}
+#formulario input, #formulario textarea {
+	width: 100%;
+	border: solid 1px #ededed;
+	border-radius:3px;
+	font-size: 1em;
+	padding: 5px;
+}
+#formulario input[type="submit"]{
+	width: 75%;
+	background: #AB0808;
+	border:solid #AB0808 1px;
+}
+/*|||||||||||||||||||||[⬆︎]||||||||||||||||||||
+|||||||||||||||||||||||||||||||||||||||||||||||
+<•[[    SECCION DE CONTACTO      ]]•>
+|||||||||||||||||||||||||||||||||||||||||||||||
+||||||||||||||||||||||||||||||||||||||||||||||*/
+
+/*|||||||||||||||||||||||||||||||||||||||||||||
+|||||||||||||||||||||||||||||||||||||||||||||||
+       <•[[    MEDIA QUERIES      ]]•>
+|||||||||||||||||||||||||||||||||||||||||||||||
+|||||||||||||||||||||[⬇︎]||||||||||||||||||||||*/
+/* TABLET VERSION */
+@media only screen (max-width: 1024px) and (min-width: 768px) {
+
+}
+/* PHONE VERSION */
+@media screen and (max-width: 767px) and (min-width: 0px) {
+	#logo{
+		max-width: 100% !important;
+		width: 100% !important;
+		height: 350px!important;
+		display: block;
+		margin: 0 auto;
+	}
+	.gridder-list {
+	    width: 45.833333%!important;
+	}
+	.gridder-list h2{
+		font-size:1.2em;
+		margin-left: 30px;
+	}
+}
+/* @media screen and (max-width: 767px) and (min-width: 0px) {
+	svg#logo{
+		transform: scale(0.5);
+		transform-origin: 0 0;
+	}
+} */
+/*|||||||||||||||||||||[⬆︎]||||||||||||||||||||
+|||||||||||||||||||||||||||||||||||||||||||||||
+       <•[[    MEDIA QUERIES      ]]•>
+|||||||||||||||||||||||||||||||||||||||||||||||
+||||||||||||||||||||||||||||||||||||||||||||||*/
