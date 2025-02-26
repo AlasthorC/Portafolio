@@ -1,0 +1,57 @@
+body {font-family: Arial, sans-serif;}
+button {background-color: #0068FF;border: none;color: #FFF;cursor: pointer;font-family: Arial, sans-serif;font-size: 12px;outline: none;-webkit-tap-highlight-color: rgba(0, 0, 0, 0);user-select: none;}
+button:hover,button:active {color: #FAF000;}
+button:active {font-size: 11px;}
+.label {color: #0D2A4D;position: absolute;margin-left: 10px;top: 35px;}
+body {margin: 0px;}
+#ad {display: block;border: rgb(145, 153, 153) 1px solid;overflow: hidden;width: 298px;height: 248px;-moz-user-select: -moz-none;-khtml-user-select: none;-webkit-user-select: none;-ms-user-select: none;user-select: none;}
+#banner {position: absolute;display: block;width: 298px;height: 248px;background-color: #FFF;overflow: hidden;}
+.buttons {position: absolute;top: 0;left: 0;}
+.button {width: 108px;height: 26px; opacity: 0;}
+.collapsed .buttons {bottom: 30px;left: 10px;}
+@font-face {font-family: 'Headline-One-HPLHS';src:url('Headline-One-HPLHS.ttf.woff') format('woff'),url('Headline-One-HPLHS.ttf.eot'),url('Headline-One-HPLHS.ttf.eot?#iefix') format('embedded-opentype'); font-weight: normal;font-style: normal;}
+/*ARTCSS*/
+.logo{width: 90px;height: 40px;display: block;position: absolute; top: 5px;left:5px; overflow: hidden;}
+.logo img{max-width: 100%; width: 100%;height: auto;display: block;}
+.stage{position: relative; width: 100%;height: 100%;}
+.fondo{display: block;width: 500px;height: 500px;background: url('../images/fondo.jpg')no-repeat center center;-webkit-background-size: 100%;background-size: 100%;position: absolute;top: -9999px;bottom: -9999px;left: -9999px;right: -9999px;margin: auto;transform:rotate(0deg);-ms-transform:rotate(0deg);-webkit-transform:rotate(0deg); animation: giroUno 60s linear infinite forwards;}
+.boom1{display: block;width: 553px;height: 397px;position: absolute;top: -9999px;bottom: -9999px;left: -9999px;right: -9999px;margin: auto;transform:scale(0);-ms-transform:scale(0);-webkit-transform:scale(0);animation:boom 1s ease-out 1 forwards; animation-delay: 2s;}
+.boom1 .agua{display: block; width: 100%;height: 100%;background: url('../images/boom1.png')no-repeat center center;transform:rotate(0deg);-ms-transform:rotate(0deg);-webkit-transform:rotate(0deg);animation:giroDos 400s ease-out 1 forwards;}
+.lata{width: 141px;height: 250px;position: absolute;top: -9999px;bottom: -9999px;left: -9999px;right: -9999px;margin: auto; background: url('../images/lata.png')no-repeat center center; -webkit-background-size: 80%;background-size: 80%;transform:scale(0);-ms-transform:scale(0);-webkit-transform:scale(0);animation:boom2 2s ease-in 1 forwards; animation-delay: 2s;}
+.boom2{display: block;width: 553px;height: 397px;position: absolute;top: -9999px;bottom: -9999px;left: -9999px;right: -9999px;margin: auto;transform:scale(0);-ms-transform:scale(0);-webkit-transform:scale(0);animation:boom 1s ease-out 1 forwards; animation-delay: 2s;}
+.boom2 .agua{display: block; width: 100%;height: 100%;background: url('../images/boom2.png')no-repeat center center;transform:rotate(0deg);-ms-transform:rotate(0deg);-webkit-transform:rotate(0deg);animation:giroUno 600s ease-out 1 forwards; opacity: 0.5;}
+.cinta{width: 200px;height: 100px;display: block;position: absolute;bottom: -20px;right: -5px;background: url('../images/cinta.png')no-repeat center center;-webkit-background-size: 100%;background-size: 100%; transform:rotate(-9deg);}
+.legal{position: absolute;left: 5px;bottom: 5px;font-size: 10px;color:#ffffff;text-transform: uppercase;}
+/*ANIMATIONSCSS*/
+@keyframes giroUno{
+    0%{transform:rotate(0deg);-ms-transform:rotate(0deg);-webkit-transform:rotate(0deg);}
+    100%{transform:rotate(360deg);-ms-transform:rotate(360deg);-webkit-transform:rotate(360deg);}
+}
+@keyframes giroDos{
+    0%{transform:rotate(360deg);-ms-transform:rotate(360deg);-webkit-transform:rotate(360deg);}
+    100%{transform:rotate(0deg);-ms-transform:rotate(0deg);-webkit-transform:rotate(0deg);}
+}
+@keyframes boom{
+    0%{transform:scale(0);-ms-transform:scale(0);-webkit-transform:scale(0);}
+    100%{transform:scale(0.6);-ms-transform:scale(0.6);-webkit-transform:scale(0.6);}
+}
+@keyframes boom2{
+    0%{transform:scale(0);-ms-transform:scale(0);-webkit-transform:scale(0);}
+    100%{transform:scale(0.8);-ms-transform:scale(0.8);-webkit-transform:scale(0.8);}
+}
+@-webkit-keyframes giroUno{
+    0%{transform:rotate(0deg);-ms-transform:rotate(0deg);-webkit-transform:rotate(0deg);}
+    100%{transform:rotate(360deg);-ms-transform:rotate(360deg);-webkit-transform:rotate(360deg);}
+}
+@-webkit-keyframes giroDos{
+    0%{transform:rotate(360deg);-ms-transform:rotate(360deg);-webkit-transform:rotate(360deg);}
+    100%{transform:rotate(0deg);-ms-transform:rotate(0deg);-webkit-transform:rotate(0deg);}
+}
+@-webkit-keyframes boom{
+    0%{transform:scale(0);-ms-transform:scale(0);-webkit-transform:scale(0);}
+    100%{transform:scale(0.6);-ms-transform:scale(0.6);-webkit-transform:scale(0.6);}
+}
+@-webkit-keyframes boom2{
+    0%{transform:scale(0);-ms-transform:scale(0);-webkit-transform:scale(0);}
+    100%{transform:scale(0.8);-ms-transform:scale(0.8);-webkit-transform:scale(0.8);}
+}
